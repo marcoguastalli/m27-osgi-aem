@@ -1,0 +1,95 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+         xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
+    <modelVersion>4.0.0</modelVersion>
+
+    <groupId>net.marco27.osgi</groupId>
+    <artifactId>m27-osgi-helloworld-consumer</artifactId>
+    <packaging>pom</packaging>
+    <version>1.0.0</version>
+
+    <parent>
+        <groupId>biz.netcentric.cq</groupId>
+        <artifactId>cq-parent</artifactId>
+        <version>1.9</version>
+    </parent>
+
+    <name>M27 OSGi</name>
+    <description>MARCO27 OSGi AEM6.2</description>
+
+    <organization>
+        <name>marco27</name>
+        <url>http://www.marco27.net</url>
+    </organization>
+
+    <!-- override properties from parent poms with project specific values -->
+    <properties>
+        <!-- group name of packages which are created from submodules -->
+        <package.group>netcentric</package.group>
+        <!-- version of CQ dependencies pom (should reflect the versions of all
+            bundles currently being deployed in CQ -->
+        <cq.dependencies.version>6.2.0</cq.dependencies.version>
+        <cq.port>6200</cq.port>
+        <cq.user>admin</cq.user>
+        <cq.password>admin</cq.password>
+        <bundle-category>netcentric</bundle-category>
+        <java.version>1.8</java.version>
+    </properties>
+
+    <modules>
+        <module>m27-osgi-components</module>
+    </modules>
+
+    <profiles>
+        <profile>
+            <id>netcentric</id>
+            <distributionManagement>
+                <repository>
+                    <id>nexus</id>
+                    <name>Release Repository</name>
+                    <url>https://repo.int.netcentric.biz/nexus/content/repositories/netcentric-releases/</url>
+                </repository>
+                <snapshotRepository>
+                    <id>nexus</id>
+                    <name>Snapshot Repository</name>
+                    <url>https://repo.int.netcentric.biz/nexus/content/repositories/netcentric-snapshots/</url>
+                </snapshotRepository>
+            </distributionManagement>
+        </profile>
+    </profiles>
+
+    <build>
+        <pluginManagement>
+            <plugins>
+                <plugin>
+                    <groupId>biz.netcentric.cq.maven</groupId>
+                    <artifactId>felixutil-maven-plugin</artifactId>
+                    <configuration>
+                        <includeFilters>
+                            <filter>biz.netcentric.*</filter>
+                        </includeFilters>
+                        <ignoreUnstartedBundles>true</ignoreUnstartedBundles>
+                    </configuration>
+                </plugin>
+            </plugins>
+        </pluginManagement>
+
+        <plugins>
+            <plugin>
+                <groupId>org.apache.maven.plugins</groupId>
+                <artifactId>maven-enforcer-plugin</artifactId>
+            </plugin>
+        </plugins>
+    </build>
+
+    <dependencyManagement>
+        <dependencies>
+            <dependency>
+                <groupId>net.marco27.osgi</groupId>
+                <artifactId>m27-osgi-helloworld</artifactId>
+                <version>1.0.0</version>
+            </dependency>
+        </dependencies>
+    </dependencyManagement>
+
+</project>
