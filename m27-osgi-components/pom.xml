@@ -5,7 +5,7 @@
     <parent>
         <groupId>net.marco27.osgi</groupId>
         <artifactId>m27-osgi-helloworld-consumer</artifactId>
-        <version>1.0.0</version>
+        <version>1.0.0-SNAPSHOT</version>
     </parent>
 
     <groupId>net.marco27.osgi.components</groupId>

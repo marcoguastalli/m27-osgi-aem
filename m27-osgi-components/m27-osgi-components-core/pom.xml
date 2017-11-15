@@ -5,7 +5,7 @@
     <parent>
         <groupId>net.marco27.osgi.components</groupId>
         <artifactId>m27-osgi-components</artifactId>
-        <version>1.0.0</version>
+        <version>1.0.0-SNAPSHOT</version>
     </parent>
 
     <artifactId>m27-osgi-components-core</artifactId>
@@ -20,7 +20,7 @@
                 <artifactId>maven-bundle-plugin</artifactId>
                 <configuration>
                     <instructions>
-                        <Sling-Model-Packages>net.marco27.osgi</Sling-Model-Packages>
+                        <Sling-Model-Packages>net.marco27.osgi.consumer</Sling-Model-Packages>
                     </instructions>
                 </configuration>
             </plugin>
