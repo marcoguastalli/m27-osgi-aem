@@ -4,7 +4,7 @@
     <modelVersion>4.0.0</modelVersion>
 
     <groupId>net.marco27.osgi</groupId>
-    <artifactId>m27-osgi-helloworld-consumer</artifactId>
+    <artifactId>m27-osgi-aem</artifactId>
     <packaging>pom</packaging>
     <version>1.0.0-SNAPSHOT</version>
 
@@ -14,8 +14,8 @@
         <version>1.9</version>
     </parent>
 
-    <name>M27 OSGi</name>
-    <description>MARCO27 OSGi AEM6.2</description>
+    <name>M27 OSGi AEM</name>
+    <description>MARCO27 OSGi AEM COMPONENT HELLOWORLD</description>
 
     <organization>
         <name>marco27</name>
@@ -37,7 +37,7 @@
     </properties>
 
     <modules>
-        <module>m27-osgi-components</module>
+        <module>m27-osgi-aem-component-helloworld</module>
     </modules>
 
     <profiles>
