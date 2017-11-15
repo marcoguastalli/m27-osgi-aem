@@ -6,7 +6,7 @@
     <groupId>net.marco27.osgi</groupId>
     <artifactId>m27-osgi-helloworld-consumer</artifactId>
     <packaging>pom</packaging>
-    <version>1.0.0</version>
+    <version>1.0.0-SNAPSHOT</version>
 
     <parent>
         <groupId>biz.netcentric.cq</groupId>
