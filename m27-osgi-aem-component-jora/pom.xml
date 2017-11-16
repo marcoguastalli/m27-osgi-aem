@@ -8,9 +8,9 @@
         <version>1.0.0-SNAPSHOT</version>
     </parent>
 
-    <artifactId>m27-osgi-aem-component-helloworld</artifactId>
+    <artifactId>m27-osgi-aem-component-jora</artifactId>
     <packaging>bundle</packaging>
-    <name>M27 OSGi :: Components :: Hello World</name>
+    <name>M27 OSGi :: Components :: Jora</name>
 
     <build>
         <plugins>
@@ -20,7 +20,7 @@
                 <artifactId>maven-bundle-plugin</artifactId>
                 <configuration>
                     <instructions>
-                        <Sling-Model-Packages>net.marco27.osgi.aem.component.helloworld</Sling-Model-Packages>
+                        <Sling-Model-Packages>net.marco27.osgi.aem.component.jora</Sling-Model-Packages>
                     </instructions>
                 </configuration>
             </plugin>
@@ -47,14 +47,19 @@
 
     <dependencies>
         <dependency>
+            <groupId>org.apache.felix</groupId>
+            <artifactId>org.osgi.core</artifactId>
+            <scope>provided</scope>
+        </dependency>
+        <dependency>
             <groupId>org.osgi</groupId>
             <artifactId>osgi.core</artifactId>
-            <version>6.0.0</version>
+            <scope>provided</scope>
         </dependency>
         <dependency>
             <groupId>org.osgi</groupId>
             <artifactId>osgi.cmpn</artifactId>
-            <version>6.0.0</version>
+            <scope>provided</scope>
         </dependency>
         <dependency>
             <groupId>org.apache.sling</groupId>
