@@ -16,7 +16,7 @@
    - Filter by net.marco27.osgi.m27-osgi-aem-component-helloworld
 
 ###### http://localhost:6200/system/console/components
-   - Search for net.marco27.osgi.aem.component.helloworld.HelloWorldOsgiConsumer
+   - Search for net.marco27.osgi.aem.component.helloworld.HelloWorldOsgiName
 
 ###### http://localhost:6200/system/console/configMgr
     - Search for
