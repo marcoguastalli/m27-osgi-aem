@@ -19,4 +19,4 @@
    - Search for net.marco27.osgi.aem.component.helloworld.HelloWorldOsgiName
 
 ###### http://localhost:6200/system/console/configMgr
-    - Search for
+    - Search for "Jora Component"
