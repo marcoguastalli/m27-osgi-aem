@@ -11,7 +11,7 @@ import org.apache.sling.commons.osgi.PropertiesUtil;
 import org.osgi.framework.BundleContext;
 import org.osgi.service.component.ComponentContext;
 
-@Component(immediate = true, label = "Jora Component")
+@Component(metatype = true, immediate = true, label = "Jora Component")
 public class Jora {
     protected BundleContext bundleContext;
 
